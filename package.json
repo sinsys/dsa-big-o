@@ -1,0 +1,19 @@
+{
+  "name": "recursive_algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon propmts.js",
+    "start": "node prompts.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prompts": "^2.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
