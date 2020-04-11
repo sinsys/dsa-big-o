@@ -244,10 +244,10 @@ A -> C // 2 | 0 | 3
 ```
 
   - How many moves are needed to complete the puzzle with 3 disks? with 4 disks? with 5 disks?
-  
-  > 3: 7
-  > 4: 15
-  > 5: 31
+
+  > 3: 7  
+  > 4: 15  
+  > 5: 31  
 
   - What is the runtime of your algorithm?
 
