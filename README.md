@@ -10,11 +10,15 @@ In these drills, you'll practice determining the big O complexity of algorithms.
 
   1. Determine the Big O for the following algorithm: You are sitting in a room with 15 people. You want to find a playmate for your dog, preferably of the same breed. So you want to know if anyone out of the 15 people have the same breed as your dog. You stand up and yell out, who here has a golden retriever and would like to be a playdate for my golden. Someone yells - "I do, be happy to bring him over"
 
+  > 0(1) - The function will only be called once regardless of the input.
+
   2. Determine the Big O for the following algorithm: You are sitting in a room with 15 people. You want to find a playmate for your dog who is of the same breed. So you want to know if anyone out of the 15 people have the same breed as your dog. You start with the first person and ask him if he has a golden retriever. He says no, then you ask the next person, and the next, and the next until you find someone who has a golden or there is no one else to ask.
+
+  > O(n) - The function can max out being equivilant to the size of the input array
 
 ### 2. Even or odd  
 
-What is the Big O of the following algorithm? Explain your answer
+  1. What is the Big O of the following algorithm? Explain your answer
 
 ```javascript
 function isEven(value) {
@@ -27,9 +31,11 @@ function isEven(value) {
 }
 ```
 
+  > 0(1) - The function will only be called once regardless of the input
+
 ### 3. Are you here?  
 
-What is the Big O of the following algorithm? Explain your answer
+  1. What is the Big O of the following algorithm? Explain your answer
 
 ```javascript
 function areYouHere(arr1, arr2) {
@@ -44,6 +50,8 @@ function areYouHere(arr1, arr2) {
 }
 ```
 
+  > O(n^2) - Two nested for loops will increase the complexity exponentially depending on the inputs
+
 ### 4. Doubler  
 
 What is the Big O of the following algorithm? Explain your answer
@@ -56,6 +64,8 @@ function doubleArrayValues(array) {
     return array;
 }
 ```
+
+  > O(n) - The loop will only run one time
 
 ### 5. Naive search  
 
@@ -71,6 +81,8 @@ function naiveSearch(array, item) {
 }
 ```
 
+  > O(n) - The loop will only run one time
+
 ### 6. Creating pairs:  
 
 What is the Big O of the following algorithm? Explain your answer
@@ -84,6 +96,8 @@ function createPairs(arr) {
     }
 }
 ```
+
+  > O(n^2) - Two nested for loops will increase the complexity exponentially depending on the inputs
 
 ### 7. Compute the sequence  
 
@@ -107,6 +121,9 @@ function compute(num) {
     return result;
 }
 ```
+
+  > The algorithm computes fibonacci numbers.
+  > O(n) - The loop will only run one time, even though its referencing stashed values from prior runs.
 
 ### 8. An efficient search  
 
@@ -137,6 +154,8 @@ function efficientSearch(array, item) {
 }
 ```
 
+  > O(log n) - The algorithm halves the input every iteration
+
 ### 9. Random element  
 
 What is the Big O of the following algorithm? Explain your answer
@@ -146,6 +165,8 @@ function findRandomElement(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 ```
+
+  > O(1) - The algorithm will only be called one single time regardless of the size of the array
 
 ### 10. What Am I?  
 
@@ -163,6 +184,9 @@ function isWhat(n) {
 }
 ```
 
+  > It determines if the number is prime or not
+  > O(n) - It will only iterate through the array once
+  
 ### 11. Tower of Hanoi  
 
 The Tower of Hanoi is a very famous mathematical puzzle (some call it game!). This is how it goes:
