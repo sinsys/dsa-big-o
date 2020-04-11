@@ -186,7 +186,7 @@ function isWhat(n) {
 
   > It determines if the number is prime or not
   > O(n) - It will only iterate through the array once
-  
+
 ### 11. Tower of Hanoi  
 
 The Tower of Hanoi is a very famous mathematical puzzle (some call it game!). This is how it goes:
@@ -197,15 +197,62 @@ The goal of the puzzle is to move the entire stack of rods to another rod (can't
   - i) Only one disk may be moved at a time 
   - ii) Each move consists of taking the upper disk from one of the rods and sliding it onto another rod, on top of the other disks that may already be present on that rod. 
   - iii) A larger disk may not placed on top of a smaller disk  
-  - 
 
 Derive an algorithm to solve the Tower of Hanoi puzzle.
 Implement your algorithm using recursion. Your program should display each movement of the disk from one rod to another.
 
-  - If you are given 5 disks, how do the rods look like after 7 recursive calls?
-  - How many moves are needed to complete the puzzle with 3 disks? with 4 disks? with 5 disks?
-  - What is the runtime of your algorithm?
+```javascript
+const towerOfHanoi = (height, sourceRod, destinationRod, bufferRod) => {
   
+  // Verify that disks exist on the peg
+  if (height >= 1) {
+
+    // Move one of the towers to a buffer rod (using destination rod)
+    towerOfHanoi(height - 1, sourceRod, bufferRod, destinationRod);
+
+    // Move the remaining disk to the destination peg.
+    console.log('Move disk from rod', sourceRod, 'to rod', destinationRod);
+
+    // Move the tower of (height - 1) from the bufferRod to the destinationRod using the sourceRod
+    towerOfHanoi(height - 1, bufferRod, destinationRod, sourceRod);
+  }
+  
+  return;
+}
+
+// Invocation:
+towerOfHanoi(3, "A", "C", "B");
+```
+
+  - If you are given 5 disks, how do the rods look like after 7 recursive calls?
+
+```javascript
+A -> C // 4 | 0 | 1
+A -> B // 3 | 1 | 1
+C -> B // 3 | 2 | 0
+A -> C // 2 | 2 | 1
+B -> A // 3 | 1 | 1
+B -> C // 3 | 0 | 2
+A -> C // 2 | 0 | 3
+
+|         |    |         |    |         |
+|         |    |         |    |         |
+|         |    |         |    |_        |
+|_ _ _ _  |    |         |    |_ _      |
+|_ _ _ _ _|    |         |    |_ _ _    |
+[  Rod A  ]    [  Rod B  ]    [  Rod C  ]
+```
+
+  - How many moves are needed to complete the puzzle with 3 disks? with 4 disks? with 5 disks?
+  
+  > 3: 7
+  > 4: 15
+  > 5: 31
+
+  - What is the runtime of your algorithm?
+
+  > O(2^n) - When the input size is increased the time complexity goes up by a factor of 2.
+
 ### 12. Iterative version  
 
 Solve the drills 1 - 7 from your previous checkpoint (Recursion) iteratively.
