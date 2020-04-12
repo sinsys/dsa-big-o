@@ -409,14 +409,23 @@ Solve the drills 1 - 7 from your previous checkpoint (Recursion) iteratively.
   Iterative version:  
 
   ```javascript
-  const nthTriangularNumber = (num) => {
-    if ( num <= 0 ) return console.log("Your number needs to be a positive integer");
+  const stringSplit = (string, delimiter) => {
+    let str = string.trim();
+    let words = [];
+    let index = str.indexOf(delimiter);
 
-    let resultNum = 0;
-    for ( let i = num; i > 0; i--) {
-      resultNum += i;
+    if ( index < 0 ) {
+      words.push(str);
+      return words;
     }
-    return resultNum;
+
+    while ( index >= 0 ) {
+      words.push(str.substring(0, index + 1));
+      str = str.slice(index + 1);
+      index = str.indexOf(delimiter);
+    }
+    words.push(str);
+    return words;
   }
   ```  
 
