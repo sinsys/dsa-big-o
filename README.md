@@ -498,48 +498,48 @@ Solve the drills 1 - 7 from your previous checkpoint (Recursion) iteratively.
 
 Take your solutions from the recursive exercises that you completed in the previous checkpoint and identify the time complexities (big O) of each of them.
 
-  [1] Counting Sheep
-    > `O(n)`
-  [2] Power Calculator
-    > `O(n)`
-  [3] Reverse String
-    > `O(n)`
-  [4] nth Triangular Number
-    > `O(n)`
-  [5] String Splitter
-    > `O(n)`
-  [6] Fibonacci
-    > `O(n)`
-  [7] Factorial
-    > `O(n)`
-  [8] Find a way out of the maze
-    > `O(3^n)`
-  [9] Find ALL the ways out of the maze
-    > `O(3^n)`
-  [10] Anagrams
-    > `O(n^2)
-  [11] Organization Chart
-    > `O(n^2)`
-  [12] Binary Representation
-    > `O(n)`
+  [1] Counting Sheep  
+    > `O(n)`  
+  [2] Power Calculator  
+    > `O(n)`  
+  [3] Reverse String  
+    > `O(n)`  
+  [4] nth Triangular Number  
+    > `O(n)`  
+  [5] String Splitter  
+    > `O(n)`  
+  [6] Fibonacci  
+    > `O(n)`  
+  [7] Factorial  
+    > `O(n)`  
+  [8] Find a way out of the maze  
+    > `O(3^n)`  
+  [9] Find ALL the ways out of the maze  
+    > `O(3^n)`  
+  [10] Anagrams  
+    > `O(n^2)  
+  [11] Organization Chart  
+    > `O(n^2)`  
+  [12] Binary Representation  
+    > `O(n)`  
 
 ### 14. Iterative Big O  
 
 Take your solutions from the iterative exercises today and identify the time complexities (big O) of each of them.
 
-  [11] Tower of Hanoi
-    > `O(2^n)`
-  [1] Counting Sheep
-    > `O(n)`
-  [2] Power Calculator
-    > `O(n)`
-  [3] Reverse String
-    > `O(n)`
-  [4] nth Triangular Number
-    > `O(n)`
-  [5] String Splitter
-    > `O(n)`
-  [6] Fibonacci
-    > `O(n)`
-  [7] Factorial
-    > `O(n)`
+  [11] Tower of Hanoi  
+    > `O(2^n)`  
+  [1] Counting Sheep  
+    > `O(n)`  
+  [2] Power Calculator  
+    > `O(n)`  
+  [3] Reverse String  
+    > `O(n)`  
+  [4] nth Triangular Number  
+    > `O(n)`  
+  [5] String Splitter  
+    > `O(n)`  
+  [6] Fibonacci  
+    > `O(n)`  
+  [7] Factorial  
+    > `O(n)`  
