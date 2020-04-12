@@ -10,11 +10,11 @@ In these drills, you'll practice determining the big O complexity of algorithms.
 
   1. Determine the Big O for the following algorithm: You are sitting in a room with 15 people. You want to find a playmate for your dog, preferably of the same breed. So you want to know if anyone out of the 15 people have the same breed as your dog. You stand up and yell out, who here has a golden retriever and would like to be a playdate for my golden. Someone yells - "I do, be happy to bring him over"
 
-  > 0(1) - The function will only be called once regardless of the input.
+  > `0(1)` - The function will only be called once regardless of the input.
 
   2. Determine the Big O for the following algorithm: You are sitting in a room with 15 people. You want to find a playmate for your dog who is of the same breed. So you want to know if anyone out of the 15 people have the same breed as your dog. You start with the first person and ask him if he has a golden retriever. He says no, then you ask the next person, and the next, and the next until you find someone who has a golden or there is no one else to ask.
 
-  > O(n) - The function can max out being equivilant to the size of the input array
+  > `O(n)` - The function can max out being equivilant to the size of the input array
 
 ### 2. Even or odd  
 
@@ -31,7 +31,7 @@ function isEven(value) {
 }
 ```
 
-  > 0(1) - The function will only be called once regardless of the input
+  > `0(1)` - The function will only be called once regardless of the input
 
 ### 3. Are you here?  
 
@@ -50,7 +50,7 @@ function areYouHere(arr1, arr2) {
 }
 ```
 
-  > O(n^2) - Two nested for loops will increase the complexity exponentially depending on the inputs
+  > `O(n^2)` - Two nested for loops will increase the complexity exponentially depending on the inputs
 
 ### 4. Doubler  
 
@@ -65,7 +65,7 @@ function doubleArrayValues(array) {
 }
 ```
 
-  > O(n) - The loop will only run one time
+  > `O(n)` - The loop will only run one time
 
 ### 5. Naive search  
 
@@ -81,7 +81,7 @@ function naiveSearch(array, item) {
 }
 ```
 
-  > O(n) - The loop will only run one time
+  > `O(n)` - The loop will only run one time
 
 ### 6. Creating pairs:  
 
@@ -97,7 +97,7 @@ function createPairs(arr) {
 }
 ```
 
-  > O(n^2) - Two nested for loops will increase the complexity exponentially depending on the inputs
+  > `O(n^2)` - Two nested for loops will increase the complexity exponentially depending on the inputs
 
 ### 7. Compute the sequence  
 
@@ -123,7 +123,7 @@ function compute(num) {
 ```
 
   > The algorithm computes fibonacci numbers.
-  > O(n) - The loop will only run one time, even though its referencing stashed values from prior runs.
+  > `O(n)` - The loop will only run one time, even though its referencing stashed values from prior runs.
 
 ### 8. An efficient search  
 
@@ -154,7 +154,7 @@ function efficientSearch(array, item) {
 }
 ```
 
-  > O(log n) - The algorithm halves the input every iteration
+  > `O(log n)` - The algorithm halves the input every iteration
 
 ### 9. Random element  
 
@@ -166,7 +166,7 @@ function findRandomElement(arr) {
 }
 ```
 
-  > O(1) - The algorithm will only be called one single time regardless of the size of the array
+  > `O(1)` - The algorithm will only be called one single time regardless of the size of the array
 
 ### 10. What Am I?  
 
@@ -185,7 +185,7 @@ function isWhat(n) {
 ```
 
   > It determines if the number is prime or not
-  > O(n) - It will only iterate through the array once
+  > `O(n)` - It will only iterate through the array once
 
 ### 11. Tower of Hanoi  
 
@@ -251,7 +251,7 @@ A -> C // 2 | 0 | 3
 
   - What is the runtime of your algorithm?
 
-  > O(2^n) - When the input size is increased the time complexity goes up by a factor of 2.
+  > `O(2^n)` - When the input size is increased the time complexity goes up by a factor of 2.
 
 ### 12. Iterative version  
 
@@ -498,6 +498,48 @@ Solve the drills 1 - 7 from your previous checkpoint (Recursion) iteratively.
 
 Take your solutions from the recursive exercises that you completed in the previous checkpoint and identify the time complexities (big O) of each of them.
 
+  [1] Counting Sheep
+    > `O(n)`
+  [2] Power Calculator
+    > `O(n)`
+  [3] Reverse String
+    > `O(n)`
+  [4] nth Triangular Number
+    > `O(n)`
+  [5] String Splitter
+    > `O(n)`
+  [6] Fibonacci
+    > `O(n)`
+  [7] Factorial
+    > `O(n)`
+  [8] Find a way out of the maze
+    > `O(3^n)`
+  [9] Find ALL the ways out of the maze
+    > `O(3^n)`
+  [10] Anagrams
+    > `O(n^2)
+  [11] Organization Chart
+    > `O(n^2)`
+  [12] Binary Representation
+    > `O(n)`
+
 ### 14. Iterative Big O  
 
 Take your solutions from the iterative exercises today and identify the time complexities (big O) of each of them.
+
+  [11] Tower of Hanoi
+    > `O(2^n)`
+  [1] Counting Sheep
+    > `O(n)`
+  [2] Power Calculator
+    > `O(n)`
+  [3] Reverse String
+    > `O(n)`
+  [4] nth Triangular Number
+    > `O(n)`
+  [5] String Splitter
+    > `O(n)`
+  [6] Fibonacci
+    > `O(n)`
+  [7] Factorial
+    > `O(n)`
