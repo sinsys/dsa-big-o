@@ -257,6 +257,243 @@ A -> C // 2 | 0 | 3
 
 Solve the drills 1 - 7 from your previous checkpoint (Recursion) iteratively.
 
+      - #### 1. Counting Sheep
+
+    Recursive version:  
+
+    ```javascript
+    const countingSheep = (count, array) => {
+
+      let lines = array || [];
+
+      // Base case
+      if ( count <= 0 ) {
+        lines.push("All sheep jumped over the fence");
+        return lines.join('\n');
+      };
+
+      // General case
+      lines.push(`${count}: Another sheep jumps over the fence.`);
+      return countingSheep(--count, lines);
+    };
+    ```
+
+    Iterative version:  
+
+    ```javascript
+    const countingSheep = (count) => {
+      let lines = [];
+      for (count; count > 0; count--) {
+        lines.push(`${count}: Another sheep jumps over the fence.`);
+      }
+      lines.push("All sheep jumped over the fence");
+      return lines.join(`\n`);
+    }
+    ```
+
+      - #### 2. Power Calculator  
+
+    Recursive version:  
+
+    ```javascript
+    const powerCalculator = (int, exp) => {
+      // Invalid case
+      if ( exp < 0 ) return "exponent should be >= 0"
+
+      // All exponents of 0 return 1
+      if ( exp === 0 ) return 1;
+
+      // Base case
+      if ( exp === 1 ) return int;
+
+      // General case
+      return int * powerCalculator(int, --exp);
+    };
+    ```
+
+    Iterative version:  
+
+    ```javascript
+    const powerCalculator = (int, exp) => {
+      if ( exp < 0 ) return "exponent should be >= 0";
+      if ( exp === 0 ) return 1;
+      if ( exp === 1 ) return int;
+
+      let result = int;
+      for (let i = 2; i <= exp; i++) {
+        result*=int;
+      }
+
+      return result;
+    }
+    ```  
+
+      - #### 3. Reverse String  
+      
+    Recursive version:  
+
+    ```javascript
+    const reverseString = (string) => {
+      if (string === "") return "";
+      return reverseString(string.substr(1)) + string.charAt(0);
+    }
+    ```
+
+    Iterative version:  
+
+    ```javascript
+    const reverseString = (string) => {
+      let strArr = string.split('');
+      let returnStr = '';
+      for (let i=strArr.length - 1; i >= 0; i--) {
+        returnStr+=strArr[i];
+      }
+      return returnStr;
+    }
+    ```  
+
+      - #### 4. nth Triangular Number
+      
+    Recursive version:  
+
+    ```javascript
+    const nthTriangularNumber = (num) => {
+      // Invalid case
+      if ( num <= 0 ) return console.log("Your number needs to be a positive integer");
+
+      // Base case
+      if (num <= 1 ) return num;
+
+      // General case
+      return num + nthTriangularNumber(num - 1);
+    }
+    ```
+
+    Iterative version:  
+
+    ```javascript
+    const nthTriangularNumber = (num) => {
+      if ( num <= 0 ) return console.log("Your number needs to be a positive integer");
+
+      let resultNum = 0;
+      for ( let i = num; i > 0; i--) {
+        resultNum += i;
+      }
+      return resultNum;
+    }
+    ```  
+
+      - #### 5. String Splitter
+      
+    Recursive version:  
+
+    ```javascript
+    const stringSplit = (string, delimiter, array) => {
+
+      let str = string.trim();
+      let words = array || [];
+      let index = str.indexOf(delimiter);
+
+      // Base case
+      if (index < 0 ) {
+        words.push(str);
+        return words;
+      }
+
+      // General case
+      words.push(str.substr(0, index));
+      return stringSplit(str.slice(index + 1), delimiter, words);
+    }
+    ```
+
+    Iterative version:  
+
+    ```javascript
+    const nthTriangularNumber = (num) => {
+      if ( num <= 0 ) return console.log("Your number needs to be a positive integer");
+
+      let resultNum = 0;
+      for ( let i = num; i > 0; i--) {
+        resultNum += i;
+      }
+      return resultNum;
+    }
+    ```  
+
+      - #### 6. Fibonacci
+      
+    Recursive version:  
+
+    ```javascript
+    const fibonacci = (num, cache) => {
+
+      // Store our prior values to decrease computations
+      cache = cache || {};
+
+      // Base case - run until there is a duplicate
+      if ( cache[num] ) return cache[num];
+
+      // Handles beginning fibonacci sequence
+      if ( num <= 0 ) return 0;
+      if ( num === 1 ) return 1;
+
+      // General case
+      return cache[num] = 
+        fibonacci(num - 1, cache) + 
+        fibonacci(num - 2, cache);
+    };
+    ```
+
+    Iterative version:  
+
+    ```javascript
+    const fibonacci = (num) => {
+      let result = [];
+      for (let i = 1; i <= num; i++) {
+
+        if (i === 1) {
+        result.push(0);
+        }
+        else if (i === 2) {
+        result.push(1);
+        }
+        else {
+        result.push(result[i - 2] + result[i - 3]);
+        }
+
+      }
+      return result;
+    }
+    ```  
+
+      - #### 7. Factorial
+      
+    Recursive version:  
+
+    ```javascript
+    const factorial = (num) => {
+      // Base case
+      if ( num <= 1 ) return num;
+
+      // General case
+      return num * factorial(num - 1);
+    };
+    ```
+
+    Iterative version:  
+
+    ```javascript
+    const factorial = (num) => {
+      if ( num <= 1 ) return num;
+
+      let result = num;
+      for ( let i = num - 1; i > 0; i-- ) {
+        result *= i;
+      }
+      return result;
+    }
+    ```  
+
 ### 13. Recursive Big O  
 
 Take your solutions from the recursive exercises that you completed in the previous checkpoint and identify the time complexities (big O) of each of them.
